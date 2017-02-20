@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html class="no-js">
     <head>
@@ -13,18 +15,19 @@
 
       <main role="main" id="main" class="main" tabindex="-1">
 
+        {% for persona in site.data.personas %}
         <div class="persona" id="personas-name">
             <div class="persona-details-main">
                 <div class="persona-details">
-                    <h1 class="persona-name">Persona's Name</h1>
-                    <h2>Job title</h2>
+                    <h1 class="persona-name">{{ persona.name }}</h1>
+                    <h2>{{ persona.job-title }}</h2>
                 </div>
 
-                <h3 class="persona-desc">Role description</h3>
+                <h3 class="persona-desc">{{ persona.role-description}}</h3>
             </div>
 
             <figure class="persona-photo">
-                <img src="img/persona.png" alt="">
+                <img src="img/{{ persona.photo }}" alt="">
             </figure>
 
             <ul class="hats" id="hats-personas-name">
@@ -34,16 +37,15 @@
             </ul>
 
             <blockquote class="persona-quote">
-                Persona quote.
+                {{ persona.quote }}
             </blockquote>
 
             <div class="persona-details-more">
-                <p>A few paragraphs of text with <strong>the important bits bolded</strong> to stand out when scanning.</p>
-
-                <p>Include information on what type of device they use, what kind of network connection they're on, and any disabilities they have.</p>
+                {{ persona.details-more }}
             </div>
 
         </div>
+        {% endfor %}
 
       </main>
 

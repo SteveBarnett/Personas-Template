@@ -1,0 +1,8 @@
+title: Personas Template
+baseurl: "/Personas-Template"
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
