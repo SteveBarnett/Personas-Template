@@ -16,7 +16,7 @@
       <main role="main" id="main" class="main" tabindex="-1">
 
         {% for persona in site.data.personas %}
-        <div class="persona" id="personas-name">
+        <div class="persona" id="{{ persona.name | downcase }}">
             <div class="persona-details-main">
                 <div class="persona-details">
                     <h1 class="persona-name">{{ persona.name }}</h1>
